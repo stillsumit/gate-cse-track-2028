@@ -1,0 +1,1476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <meta name="theme-color" content="#0d1117" />
+    <title>GATE CSE 2028 · Workspace</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- KaTeX for Formula Rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <!-- PDF.js for slicing multi-page GATE PDFs locally in the browser -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path
+                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+              />
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span>GATE<b>.TRACK</b></span>
+            <span class="brand-tag">CSE 2028</span>
+          </div>
+        </div>
+
+        <div class="eyebrow">Workspace</div>
+
+        <nav class="nav" id="nav">
+          <button class="active" data-view="dashboard">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+            </svg>
+            Overview
+          </button>
+          <button data-view="syllabus">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              />
+              <line x1="12" y1="11" x2="12" y2="17" />
+              <line x1="9" y1="14" x2="15" y2="14" />
+            </svg>
+            Syllabus Tree
+          </button>
+          <button data-view="study">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Study Log
+          </button>
+          <button data-view="practice">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+            Practice Sets
+          </button>
+          <button data-view="pyqbank">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+            AI PYQ Bank
+          </button>
+          <button data-view="tests">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+            Mock Tests
+          </button>
+          <button data-view="planner">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            Planner
+          </button>
+          <button data-view="analytics">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+            Analytics
+          </button>
+          <button data-view="byok">
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"
+              />
+            </svg>
+            AI Setup (BYOK)
+          </button>
+        </nav>
+
+        <div class="side-note">
+          <div class="side-note-dot"></div>
+          <div>
+            Offline persistence active.<br /><b>All changes saved locally.</b>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main">
+        <!-- Top Navigation Bar -->
+        <header class="top">
+          <div>
+            <h1 id="pageTitle">Overview</h1>
+            <div class="sub" id="todayLine">
+              GATE CSE 2028 · Preparation Workspace
+            </div>
+          </div>
+          <div class="actions">
+            <button
+              class="btn icon-btn"
+              id="calcToggleBtn"
+              title="GATE Scientific Calculator"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+                <line x1="8" y1="6" x2="16" y2="6" />
+                <line x1="8" y1="10" x2="8" y2="10.01" />
+                <line x1="12" y1="10" x2="12" y2="10.01" />
+                <line x1="16" y1="10" x2="16" y2="10.01" />
+                <line x1="8" y1="14" x2="8" y2="14.01" />
+                <line x1="12" y1="14" x2="12" y2="14.01" />
+                <line x1="16" y1="14" x2="16" y2="14.01" />
+                <line x1="8" y1="18" x2="8" y2="18.01" />
+                <line x1="12" y1="18" x2="16" y2="18" />
+              </svg>
+            </button>
+
+            <button
+              class="btn icon-btn"
+              id="themeToggle"
+              title="Toggle Display Mode"
+            >
+              <svg
+                id="themeIcon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </button>
+            <button class="btn" id="exportBtn">Export JSON</button>
+            <button class="btn" id="importBtn">Import JSON</button>
+            <input
+              type="file"
+              id="importFile"
+              accept="application/json"
+              hidden
+            />
+            <button class="btn primary" id="quickLog">+ Log Session</button>
+          </div>
+        </header>
+
+        <!-- View 1: Dashboard / Overview -->
+        <section class="view active" id="view-dashboard">
+          <div class="countdown-banner">
+            <div class="countdown-info">
+              <span class="countdown-badge">EXAM TARGET</span>
+              <div>
+                <div class="countdown-text" id="countdownHeadline">
+                  Target: February 2028
+                </div>
+                <div class="countdown-sub">
+                  Consistent deliberate problem solving yields rank stability.
+                </div>
+              </div>
+            </div>
+            <div class="countdown-timer" id="countdownDays">— Days Left</div>
+          </div>
+
+          <div class="grid stats">
+            <div class="card">
+              <div class="stat-label">Syllabus Completion</div>
+              <div class="stat-value" id="statCompletion">0%</div>
+              <div class="stat-foot" id="statTopics">
+                0 of 0 topics completed
+              </div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Marks Readiness</div>
+              <div class="stat-value" id="statMarksReadiness">0.0 / 100</div>
+              <div class="stat-foot" id="statWeightageFoot">
+                GATE Syllabus-Weighted
+              </div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Total Focused Time</div>
+              <div class="stat-value" id="statHours">0h</div>
+              <div class="stat-foot">Logged conceptual hours</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Questions Attempted</div>
+              <div class="stat-value" id="statQuestions">0</div>
+              <div class="stat-foot" id="statAccuracy">
+                Accuracy not tracked yet
+              </div>
+            </div>
+          </div>
+
+          <div class="grid layout">
+            <div class="card">
+              <div class="card-head">
+                <h2>Subject Progress</h2>
+                <button class="btn sm" data-go="syllabus">Open Syllabus</button>
+              </div>
+              <div class="subject-list" id="dashSubjects"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>Quick Actions</h2>
+                <span class="pill">Fast Entry</span>
+              </div>
+              <div class="quick">
+                <button class="btn" data-action="study">
+                  <b>+ Study Session</b>
+                  <small>Log focused hours</small>
+                </button>
+                <button class="btn" data-action="practice">
+                  <b>+ Practice Set</b>
+                  <small>Record question set</small>
+                </button>
+                <button class="btn" data-action="test">
+                  <b>+ Mock Test</b>
+                  <small>Log test series score</small>
+                </button>
+                <button class="btn" data-action="task">
+                  <b>+ Weekly Goal</b>
+                  <small>Add checklist milestone</small>
+                </button>
+              </div>
+
+              <div class="spacer"></div>
+
+              <div class="card-head">
+                <h2>Weekly Focus</h2>
+                <span class="pill" id="weekCount">0 / 0 done</span>
+              </div>
+              <div id="weekFocus" class="muted text-sm">
+                Add a weekly target in Planner to track sprint.
+              </div>
+              <div class="notice">
+                Rule: Mark a topic complete only after you can solve standard
+                PYQs without referencing notes.
+              </div>
+            </div>
+          </div>
+
+          <div class="grid layout">
+            <div class="card">
+              <div class="card-head">
+                <h2>Study Activity</h2>
+                <span class="muted text-xs">Last 7 Days · Hours</span>
+              </div>
+              <div id="activityChart" class="bar-chart"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>Revision Queue</h2>
+                <button class="btn sm" data-go="syllabus">Manage Topics</button>
+              </div>
+              <div id="revisionQueue" class="muted text-sm">
+                No revision due.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- View 2: Syllabus Tracker (Tree) -->
+        <section class="view" id="view-syllabus">
+          <h2 class="section-title">Syllabus Breakdown</h2>
+          <p class="section-intro">
+            Hierarchical syllabus modules. Check off micro-topics as you achieve
+            mastery.
+          </p>
+
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <b id="syllabusSummary">0 subtopics completed</b>
+                <div class="muted text-xs">
+                  Calculated from individual syllabus leaves
+                </div>
+              </div>
+              <span class="pill" id="syllabusPct">0%</span>
+            </div>
+            <div class="progress"><i id="syllabusBar"></i></div>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="syllabus-controls">
+            <div class="filter-pills" id="syllabusFilters">
+              <button
+                type="button"
+                class="filter-pill active"
+                data-filter="all"
+              >
+                All Subtopics
+              </button>
+              <button
+                type="button"
+                class="filter-pill"
+                data-filter="in-progress"
+              >
+                In Progress
+              </button>
+              <button type="button" class="filter-pill" data-filter="completed">
+                Completed
+              </button>
+              <button type="button" class="filter-pill" data-filter="revision">
+                Revision Due
+              </button>
+            </div>
+            <div class="syllabus-search-row">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="syllabusSearch"
+                  placeholder="Search syllabus (e.g. TLB, K-Map, Pointers)..."
+                />
+              </div>
+              <button type="button" class="btn sm" id="toggleAllSubjectsBtn">
+                Expand All
+              </button>
+            </div>
+          </div>
+
+          <div id="subjectPanels"></div>
+        </section>
+
+        <!-- View 3: Study Log -->
+        <section class="view" id="view-study">
+          <h2 class="section-title">Study Log</h2>
+          <p class="section-intro">
+            Record focused learning blocks. Track real productive time.
+          </p>
+
+          <div class="card">
+            <!-- Live Focus Stopwatch -->
+            <div class="card" style="margin-bottom: 14px">
+              <div
+                class="card-head"
+                style="margin-bottom: 0; flex-wrap: wrap; gap: 10px"
+              >
+                <div>
+                  <h2>Live Study Stopwatch</h2>
+                  <div class="muted text-xs">
+                    Tracks active focus time and fills the form below
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <span
+                    id="stopwatchDisplay"
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 20px;
+                      font-weight: 750;
+                      color: var(--accent);
+                    "
+                    >00:00:00</span
+                  >
+                  <button type="button" class="btn primary sm" id="swStartBtn">
+                    Start
+                  </button>
+                  <button type="button" class="btn sm" id="swFillBtn">
+                    Log Time ↓
+                  </button>
+                  <button type="button" class="btn danger sm" id="swResetBtn">
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-head"><h2>Log Session</h2></div>
+            <form id="studyForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Date</label>
+                  <input type="date" name="date" required />
+                </div>
+                <div class="field">
+                  <label>Subject</label>
+                  <select name="subject" class="subject-select"></select>
+                </div>
+                <div class="field">
+                  <label>Duration (Hours)</label>
+                  <input
+                    type="number"
+                    name="hours"
+                    min="0.1"
+                    max="24"
+                    step="0.1"
+                    placeholder="1.5"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label>Activity Type</label>
+                  <select name="activity">
+                    <option>Concept Learning</option>
+                    <option>Lecture / Notes</option>
+                    <option>Revision</option>
+                    <option>PYQ Practice</option>
+                    <option>Problem Solving</option>
+                    <option>Mock Analysis</option>
+                  </select>
+                </div>
+                <div class="field grid-span-2">
+                  <label>Coverage Details</label>
+                  <input
+                    name="notes"
+                    placeholder="e.g. Banker's Algorithm proofs, 2021 PYQs"
+                  />
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn primary">Save Session</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>Session History</h2>
+              <span class="pill" id="sessionCount">0 sessions</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Activity</th>
+                    <th>Hours</th>
+                    <th>Notes</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="sessionRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- View 4: Practice & Sets -->
+        <section class="view" id="view-practice">
+          <h2 class="section-title">Practice & Drill Tracking</h2>
+          <p class="section-intro">
+            Log batch volume and track raw accuracy across problem sheets.
+          </p>
+
+          <div class="grid stats">
+            <div class="card">
+              <div class="stat-label">Questions Attempted</div>
+              <div class="stat-value" id="practiceAttempted">0</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Correct Answers</div>
+              <div class="stat-value" id="practiceCorrect">0</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Overall Accuracy</div>
+              <div class="stat-value" id="practiceAccuracy">—</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">PYQs Solved</div>
+              <div class="stat-value" id="practicePyq">0</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h2>Log Practice Set</h2></div>
+            <form id="practiceForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Date</label>
+                  <input type="date" name="date" required />
+                </div>
+                <div class="field">
+                  <label>Subject</label>
+                  <select name="subject" class="subject-select"></select>
+                </div>
+                <div class="field">
+                  <label>Set Type</label>
+                  <select name="type">
+                    <option>Topic Practice</option>
+                    <option>GATE PYQ</option>
+                    <option>Sectional Test</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Attempted</label>
+                  <input type="number" name="attempted" min="1" required />
+                </div>
+                <div class="field">
+                  <label>Correct</label>
+                  <input type="number" name="correct" min="0" required />
+                </div>
+                <div class="field">
+                  <label>Time Spent (Minutes)</label>
+                  <input type="number" name="minutes" min="0" value="30" />
+                </div>
+                <div class="field grid-span-3">
+                  <label>Diagnostic Analysis & Notes</label>
+                  <input
+                    name="notes"
+                    placeholder="e.g. Failed MSQ due to missing edge condition in Dijkstra"
+                  />
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn primary">Record Set</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="card">
+            <div class="card-head"><h2>Practice History</h2></div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Type</th>
+                    <th>Attempted</th>
+                    <th>Correct</th>
+                    <th>Accuracy</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="practiceRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- View: AI PYQ Digitizer & Question Bank -->
+        <section class="view" id="view-pyqbank">
+          <h2 class="section-title">AI PYQ Digitizer & Quiz Hub</h2>
+          <p class="section-intro">
+            Paste screenshots (Ctrl+V), drop question clips, or slice pages from
+            GATE PDFs into interactive KaTeX cards.
+          </p>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>Upload, Paste, or Slice Question</h2>
+              <div style="display: flex; gap: 6px; align-items: center">
+                <span class="pill" id="activeProviderPill">No Key</span>
+                <button class="btn sm" data-go="byok">AI Setup</button>
+                <button
+                  class="btn sm"
+                  id="apiKeyBtn"
+                  title="Configure OpenRouter or Gemini API Key"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="margin-right: 4px"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    />
+                  </svg>
+                  Keys
+                </button>
+              </div>
+            </div>
+
+            <div class="upload-dropzone" id="pyqDropzone">
+              <input
+                type="file"
+                id="pyqFileInput"
+                accept="image/*,application/pdf"
+                hidden
+              />
+              <div class="upload-icon-wrap">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+              </div>
+              <div class="upload-text">
+                Drop question clip / PDF here, press <b>Ctrl + V</b> to paste a
+                screenshot, or
+                <span class="upload-link">browse files</span>
+              </div>
+              <div class="muted text-xs" style="margin-top: 4px">
+                Multi-page PDFs are sliced locally in-browser. Supports
+                OpenRouter &amp; Google Gemini keys with automatic failover.
+              </div>
+            </div>
+
+            <!-- Preview & Status -->
+            <div
+              id="digitizerStatus"
+              class="digitizer-status"
+              style="display: none"
+            >
+              <div class="digitizer-preview-wrap">
+                <img id="imagePreview" src="" alt="Input Preview" />
+              </div>
+              <div class="digitizer-info">
+                <div id="aiStatusText" class="digitizer-spinner">
+                  Analyzing document...
+                </div>
+                <div class="muted text-xs" id="aiStatusSub">
+                  Extracting question, options, answer key and LaTeX reasoning
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h2>Saved Question Bank</h2>
+                <div class="muted text-xs" id="pyqBankSummary">
+                  0 questions indexed
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 8px;
+                  flex-wrap: wrap;
+                  align-items: center;
+                "
+              >
+                <select
+                  id="pyqStatusFilter"
+                  style="max-width: 165px; padding: 6px 10px; font-size: 11px"
+                >
+                  <option value="all">All Status</option>
+                  <option value="unattempted">Unattempted</option>
+                  <option value="wrong">Incorrect (Review)</option>
+                  <option value="correct">Solved Correct</option>
+                </select>
+                <select
+                  id="pyqSubjectFilter"
+                  style="max-width: 200px; padding: 6px 10px; font-size: 11px"
+                >
+                  <option value="all">All Subjects</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="pyqBankList" class="pyq-bank-list"></div>
+          </div>
+        </section>
+
+        <!-- View 5: Mock Tests -->
+        <section class="view" id="view-tests">
+          <h2 class="section-title">Mock Test Performance</h2>
+          <p class="section-intro">
+            Track test series performance trends. Focus on percentile and
+            accuracy over single-test fluctuations.
+          </p>
+
+          <div class="grid stats">
+            <div class="card">
+              <div class="stat-label">Tests Completed</div>
+              <div class="stat-value" id="testCount">0</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Average Score</div>
+              <div class="stat-value" id="testAverage">—</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Personal Best</div>
+              <div class="stat-value" id="testBest">—</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Mean Accuracy</div>
+              <div class="stat-value" id="testAccuracy">—</div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom: 14px">
+            <div class="card-head">
+              <h2>Score Progression (/100)</h2>
+              <span class="muted text-xs" id="testTrendMeta"
+                >Chronological trend</span
+              >
+            </div>
+            <div id="testTrendChart" class="trend-chart-wrap">
+              <div class="empty">
+                Log at least 2 mock tests to visualize your score trend.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h2>Record Test Attempt</h2></div>
+            <form id="testForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Date</label>
+                  <input type="date" name="date" required />
+                </div>
+                <div class="field">
+                  <label>Test Name</label>
+                  <input
+                    name="name"
+                    placeholder="e.g. Made Easy Full Length 02"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label>Format</label>
+                  <select name="type">
+                    <option>Full-Length (65Q)</option>
+                    <option>Sectional Test</option>
+                    <option>Subject Test</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Score Scored (/100)</label>
+                  <input
+                    type="number"
+                    name="marks"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label>Accuracy (%)</label>
+                  <input
+                    type="number"
+                    name="accuracy"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                    placeholder="78.5"
+                  />
+                </div>
+                <div class="field">
+                  <label>Duration (Minutes)</label>
+                  <input type="number" name="duration" min="1" value="180" />
+                </div>
+                <div class="field grid-span-3">
+                  <label>Weak Area Diagnostics</label>
+                  <input
+                    name="notes"
+                    placeholder="e.g. Lost 4 marks in NAT numerical rounding in Networks"
+                  />
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn primary">Save Test</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="card">
+            <div class="card-head"><h2>Attempt Records</h2></div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Test</th>
+                    <th>Type</th>
+                    <th>Score / 100</th>
+                    <th>Accuracy</th>
+                    <th>Diagnostics</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="testRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- View 6: Planner & Backlog -->
+        <section class="view" id="view-planner">
+          <h2 class="section-title">Planner & Milestones</h2>
+          <p class="section-intro">
+            Set sprint targets and clear overdue backlog items methodically.
+          </p>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>Define Sprint Target</h2>
+              <span class="pill" id="plannerWeek">Current Sprint</span>
+            </div>
+            <form id="taskForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Objective</label>
+                  <input
+                    name="title"
+                    placeholder="Complete 50 Cache Mapping PYQs"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label>Subject</label>
+                  <select name="subject" class="subject-select"></select>
+                </div>
+                <div class="field">
+                  <label>Target Date</label>
+                  <input type="date" name="due" required />
+                </div>
+                <div class="field">
+                  <label>Priority</label>
+                  <select name="priority">
+                    <option>Normal</option>
+                    <option>High</option>
+                    <option>Low</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn primary">Add Objective</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="grid two">
+            <div class="card">
+              <div class="card-head">
+                <h2>Active Sprint Goals</h2>
+                <span class="pill" id="activeTasks">0</span>
+              </div>
+              <div id="activeTaskList" class="topic-list"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>Overdue Backlog</h2>
+                <span class="pill warn" id="backlogCount">0 overdue</span>
+              </div>
+              <div id="backlogList" class="topic-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- View 7: Analytics -->
+        <section class="view" id="view-analytics">
+          <h2 class="section-title">Preparation Analytics</h2>
+          <p class="section-intro">
+            Objective metrics to evaluate syllabus depth, accuracy gaps, and
+            revision timing.
+          </p>
+
+          <div class="grid stats">
+            <div class="card">
+              <div class="stat-label">Total Time Invested</div>
+              <div class="stat-value" id="anaHours">0</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Daily Average (Active)</div>
+              <div class="stat-value" id="anaDaily">0</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Aggregated Accuracy</div>
+              <div class="stat-value" id="anaAccuracy">—</div>
+            </div>
+            <div class="card">
+              <div class="stat-label">Topics in Progress</div>
+              <div class="stat-value" id="anaProgress">0</div>
+            </div>
+          </div>
+
+          <div class="grid layout">
+            <div class="card">
+              <div class="card-head"><h2>Hours by Domain</h2></div>
+              <div id="subjectHours"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-head"><h2>Performance Overview</h2></div>
+              <div id="performanceSnapshot" class="topic-list"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>Spaced Repetition Schedule</h2>
+              <span class="pill">1d · 7d · 21d</span>
+            </div>
+            <p class="muted text-sm" style="margin-top: 0">
+              Spaced retrieval prevents forgetting curves. Recommended
+              checkpoints: R1 = 1 day, R2 = 7 days, R3 = 21 days post
+              completion.
+            </p>
+            <div id="revisionAnalytics" class="topic-list"></div>
+          </div>
+        </section>
+
+        <!-- View 8: AI Setup & BYOK Guide -->
+        <section class="view" id="view-byok">
+          <h2 class="section-title">Multi-Provider AI Setup (BYOK)</h2>
+          <p class="section-intro">
+            Connect a free OpenRouter key (<code>sk-or-v1-...</code>) or Google
+            Gemini key (<code>AIzaSy...</code>)—or save both for automatic
+            cross-provider failover.
+          </p>
+
+          <!-- Live Key Configuration & Connection Tester -->
+          <div class="card" style="margin-bottom: 14px">
+            <div class="card-head">
+              <h2>1. Connect &amp; Verify Your API Key(s)</h2>
+              <span class="pill" id="byokStatusBadge">Not Configured</span>
+            </div>
+
+            <div class="field" style="margin-bottom: 10px">
+              <label
+                >Primary Key (OpenRouter sk-or-... or Gemini AIzaSy...)</label
+              >
+              <div class="byok-key-row">
+                <input
+                  type="password"
+                  id="byokPageInput"
+                  placeholder="Paste OpenRouter (sk-or-v1-...) or Gemini (AIzaSy...) key"
+                  autocomplete="off"
+                />
+                <button type="button" class="btn sm" id="byokToggleVisBtn">
+                  Show
+                </button>
+              </div>
+            </div>
+
+            <div class="field" style="margin-bottom: 12px">
+              <label
+                >Optional Backup Key (Automatic Failover if Primary is
+                Busy)</label
+              >
+              <div class="byok-key-row">
+                <input
+                  type="password"
+                  id="byokBackupInput"
+                  placeholder="Optional second provider key for zero-downtime failover"
+                  autocomplete="off"
+                />
+                <button type="button" class="btn primary" id="byokSaveTestBtn">
+                  Save &amp; Test Keys
+                </button>
+                <button type="button" class="btn danger" id="byokClearBtn">
+                  Clear All
+                </button>
+              </div>
+            </div>
+
+            <div
+              id="byokTestFeedback"
+              class="muted text-xs"
+              style="margin-top: 8px"
+            >
+              Keys are stored 100% locally in your browser's localStorage and
+              are never sent to any third-party server.
+            </div>
+          </div>
+
+          <!-- Step-by-Step Guide -->
+          <div class="grid two" style="margin-bottom: 14px">
+            <div class="card">
+              <div class="card-head">
+                <h2>2. Option A: OpenRouter Free Key (Recommended)</h2>
+                <span class="pill good">Smart Router</span>
+              </div>
+              <ol class="byok-steps">
+                <li>
+                  <b>Open OpenRouter Keys:</b> Visit
+                  <a
+                    href="https://openrouter.ai/settings/keys"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="byok-link"
+                    >openrouter.ai/settings/keys ↗</a
+                  >
+                  and sign in with Google or GitHub (no credit card required).
+                </li>
+                <li>
+                  <b>Create Key:</b> Click <b>"Create Key"</b> and copy the
+                  string starting with <code>sk-or-v1-...</code>.
+                </li>
+                <li>
+                  <b>Why OpenRouter?</b> Uses <code>openrouter/free</code> +
+                  vision models (<code>gemma-4</code>,
+                  <code>nemotron-3.5-vl</code>) to route around single-server
+                  congestion automatically.
+                </li>
+              </ol>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>3. Option B: Google Gemini Free Key</h2>
+                <span class="pill">Backup / Primary</span>
+              </div>
+              <ol class="byok-steps">
+                <li>
+                  <b>Open Google AI Studio:</b> Visit
+                  <a
+                    href="https://aistudio.google.com/apikey"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="byok-link"
+                    >aistudio.google.com/apikey ↗</a
+                  >
+                  and sign in with your Google account.
+                </li>
+                <li>
+                  <b>Create Key:</b> Click <b>"Create API key"</b> and copy the
+                  string starting with <code>AIzaSy...</code>.
+                </li>
+                <li>
+                  <b>Best Workflow:</b> Use <b>Win + Shift + S</b> then
+                  <b>Ctrl + V</b> anywhere in GATE.TRACK to paste question clips
+                  instantly without saving files.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Mobile Bottom Navigation Dock (Visible <= 640px) -->
+      <nav class="mobile-dock" id="mobileDock">
+        <button class="active" data-view="dashboard">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+          </svg>
+          <span>Overview</span>
+        </button>
+        <button data-view="syllabus">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          <span>Syllabus</span>
+        </button>
+        <button data-view="pyqbank">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+          <span>PYQ Bank</span>
+        </button>
+        <button data-view="study">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span>Study</span>
+        </button>
+        <button type="button" id="mobileMoreBtn">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="19" cy="12" r="1" />
+            <circle cx="5" cy="12" r="1" />
+          </svg>
+          <span>More</span>
+        </button>
+      </nav>
+
+      <!-- Mobile "More" Drawer -->
+      <div class="mobile-sheet-back" id="mobileMoreSheet">
+        <div class="mobile-sheet">
+          <div class="mobile-sheet-handle"></div>
+          <div class="mobile-sheet-grid">
+            <button data-view="practice">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              <span>Practice Sets</span>
+            </button>
+            <button data-view="tests">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+              </svg>
+              <span>Mock Tests</span>
+            </button>
+            <button data-view="planner">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              <span>Planner</span>
+            </button>
+            <button data-view="analytics">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+              <span>Analytics</span>
+            </button>
+            <button data-view="byok">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"
+                />
+              </svg>
+              <span>AI Setup</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Dialog Frame -->
+    <div class="modal-back" id="modal">
+      <div class="modal">
+        <div class="card-head">
+          <h2 id="modalTitle">Schedule Revision</h2>
+          <button class="btn icon-btn" id="modalClose">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Authentic TCS iON GATE Virtual Scientific Calculator -->
+    <div class="gate-calc" id="gateCalc">
+      <div class="calc-header">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <span style="font-weight: 700; font-size: 12px"
+            >Scientific Calculator</span
+          >
+          <span class="calc-mem-badge" id="calcMemBadge" hidden>M</span>
+        </div>
+        <button type="button" class="btn icon-btn sm" id="calcCloseBtn">
+          ✕
+        </button>
+      </div>
+
+      <div class="calc-screen">
+        <div class="calc-expr" id="calcExpr"></div>
+        <input
+          type="text"
+          class="calc-display"
+          id="calcDisplay"
+          value="0"
+          readonly
+        />
+      </div>
+
+      <div class="calc-mode-bar">
+        <div class="calc-radios">
+          <label
+            ><input type="radio" name="calcAngle" value="DEG" checked />
+            Deg</label
+          >
+          <label><input type="radio" name="calcAngle" value="RAD" /> Rad</label>
+        </div>
+        <span
+          class="muted"
+          style="font-size: 10px; font-family: var(--font-mono)"
+          >TCS iON Layout</span
+        >
+      </div>
+
+      <div class="calc-grid-tcs" id="calcKeys">
+        <!-- Row 1: Memory & Clear -->
+        <button type="button" class="calc-mem" data-mem="MC">MC</button>
+        <button type="button" class="calc-mem" data-mem="MR">MR</button>
+        <button type="button" class="calc-mem" data-mem="MS">MS</button>
+        <button type="button" class="calc-mem" data-mem="M+">M+</button>
+        <button type="button" class="calc-mem" data-mem="M-">M-</button>
+        <button type="button" class="calc-danger" data-act="back">←</button>
+        <button type="button" class="calc-danger" data-act="clear">C</button>
+
+        <!-- Row 2: Hyperbolics & Basic Ops -->
+        <button type="button" data-unary="sinh">sinh</button>
+        <button type="button" data-unary="cosh">cosh</button>
+        <button type="button" data-unary="tanh">tanh</button>
+        <button type="button" data-bin="Exp">Exp</button>
+        <button type="button" data-paren="(">(</button>
+        <button type="button" data-paren=")">)</button>
+        <button type="button" class="calc-op" data-unary="neg">+/-</button>
+
+        <!-- Row 3: Inverse Hyperbolics, Constants & Digits -->
+        <button type="button" data-unary="asinh">sinh⁻¹</button>
+        <button type="button" data-unary="acosh">cosh⁻¹</button>
+        <button type="button" data-unary="atanh">tanh⁻¹</button>
+        <button type="button" data-const="PI">π</button>
+        <button type="button" class="calc-num" data-digit="7">7</button>
+        <button type="button" class="calc-num" data-digit="8">8</button>
+        <button type="button" class="calc-num" data-digit="9">9</button>
+
+        <!-- Row 4: Trig, Logs & Digits -->
+        <button type="button" data-unary="sin">sin</button>
+        <button type="button" data-unary="cos">cos</button>
+        <button type="button" data-unary="tan">tan</button>
+        <button type="button" data-unary="ln">ln</button>
+        <button type="button" class="calc-num" data-digit="4">4</button>
+        <button type="button" class="calc-num" data-digit="5">5</button>
+        <button type="button" class="calc-num" data-digit="6">6</button>
+
+        <!-- Row 5: Inverse Trig, Log10 & Digits -->
+        <button type="button" data-unary="asin">sin⁻¹</button>
+        <button type="button" data-unary="acos">cos⁻¹</button>
+        <button type="button" data-unary="atan">tan⁻¹</button>
+        <button type="button" data-unary="log10">log</button>
+        <button type="button" class="calc-num" data-digit="1">1</button>
+        <button type="button" class="calc-num" data-digit="2">2</button>
+        <button type="button" class="calc-num" data-digit="3">3</button>
+
+        <!-- Row 6: Powers, Roots, Base-2/Base-Y Logs & Zero -->
+        <button type="button" data-unary="sqr">x²</button>
+        <button type="button" data-unary="cube">x³</button>
+        <button type="button" data-bin="^">xʸ</button>
+        <button type="button" data-unary="pow10">10ˣ</button>
+        <button type="button" class="calc-num" data-digit="0">0</button>
+        <button type="button" class="calc-num" data-digit=".">.</button>
+        <button type="button" class="calc-op" data-bin="/">/</button>
+
+        <!-- Row 7: Advanced Roots, Factorial, Mod & Arithmetic -->
+        <button type="button" data-unary="sqrt">√x</button>
+        <button type="button" data-unary="cbrt">∛x</button>
+        <button type="button" data-bin="yroot">ʸ√x</button>
+        <button type="button" data-unary="exp">eˣ</button>
+        <button type="button" class="calc-op" data-bin="*">*</button>
+        <button type="button" class="calc-op" data-bin="-">-</button>
+        <button type="button" class="calc-op" data-bin="+">+</button>
+
+        <!-- Row 8: GATE CSE Specials (log2, log_y, n!, 1/x, Mod, Copy, =) -->
+        <button type="button" data-unary="log2">log₂x</button>
+        <button type="button" data-bin="logy">logᵧx</button>
+        <button type="button" data-unary="fact">n!</button>
+        <button type="button" data-unary="inv">1/x</button>
+        <button type="button" data-bin="Mod">Mod</button>
+        <button type="button" data-act="copy" title="Copy Result">Copy</button>
+        <button type="button" class="calc-eq" data-act="eval">=</button>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
